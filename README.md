@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Welcome to your Lovable project
 
 ## Project info
@@ -71,3 +72,7 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+=======
+# Kri-Sahaay
+An AI based agro app to help farmers with crop recommendations so that they can study their environment and soil and grow crop accordingly to increase their market value. 
+>>>>>>> 3fb4565f95905015097eb967ae14249be3fa47fc
