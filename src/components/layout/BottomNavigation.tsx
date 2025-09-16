@@ -1,22 +1,42 @@
-import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Home, Bookmark, Bell, Settings } from 'lucide-react';
+import { Home, Bookmark, FileText, Settings } from "lucide-react";
 
 const BottomNavigation = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
   // Don't show navigation on login or chat pages
-  if (location.pathname === '/' || location.pathname === '/chat') {
+  if (location.pathname === "/" || location.pathname === "/chat") {
     return null;
   }
 
   const navItems = [
-    { icon: Home, label: 'Home', path: '/home', variant: 'agriculture' as const },
-    { icon: Bookmark, label: 'Saved', path: '/saved', variant: 'golden' as const },
-    { icon: Bell, label: 'Alerts', path: '/alerts', variant: 'ghost' as const },
-    { icon: Settings, label: 'Settings', path: '/settings', variant: 'ghost' as const },
+    {
+      icon: Home,
+      label: "Home",
+      path: "/home",
+      variant: "agriculture" as const,
+    },
+    {
+      icon: Bookmark,
+      label: "Saved",
+      path: "/saved",
+      variant: "golden" as const,
+    },
+    {
+      icon: FileText,
+      label: "Application",
+      path: "/applications",
+      variant: "ghost" as const,
+    },
+    {
+      icon: Settings,
+      label: "Settings",
+      path: "/settings",
+      variant: "ghost" as const,
+    },
   ];
 
   return (
@@ -26,11 +46,11 @@ const BottomNavigation = () => {
           {navItems.map((item) => {
             const isActive = location.pathname === item.path;
             const Icon = item.icon;
-            
+
             return (
               <Button
                 key={item.path}
-                variant={isActive ? item.variant : 'ghost'}
+                variant={isActive ? item.variant : "ghost"}
                 size="icon-lg"
                 onClick={() => navigate(item.path)}
                 className="flex-col h-16 w-16 gap-1"
